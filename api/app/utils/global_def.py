@@ -24,3 +24,9 @@ class StatusEnum(str, Enum):
     ACTIVE = "active"
     INACTIVE = "inactive"
     DELETED = "deleted"
+
+
+class ResultEnum(str, Enum):
+    """Enumeration for operation results."""
+    SUCCESS = "success"
+    FAILURE = "failure"
