@@ -380,3 +380,9 @@ The `birthdate` field will be automatically normalized using a date parser funct
 | **Database**         | MySQL                   |
 | **Containerization** | Docker & Docker Compose |
 | **Language**         | Python 3.13            |
+
+
+## 🛠️ Solution Improvements
+
+- A new table to link user with institutions that will allow more than one institution per user (1 to many).
+- Create athletes just for the own institution, but it needs the previous statement.
