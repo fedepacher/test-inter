@@ -31,3 +31,10 @@ httpx==0.28.1
 # Miscellaneous libraries
 # PyJWT for JSON Web Tokens
 pyjwt==2.10.1
+
+# Password hashing
+passlib==1.7.4
+# JSON Web Signatures
+python-jose==3.4.0
+# C parser for cryptography
+pycparser==2.22

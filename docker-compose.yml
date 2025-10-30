@@ -1,0 +1,53 @@
+services:
+  database:
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}_${RUN_ENV}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASS}
+    networks:
+      va_network:
+        aliases:
+          - database
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
+      - database
+    environment:
+      RUN_ENV: ${RUN_ENV}
+
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      DB_HOST: ${DB_HOST}
+      DB_HOST_GCP: ${DB_HOST_GCP}
+      DB_PORT: ${DB_PORT}
+
+      ACCESS_TOKEN_EXPIRE_MINUTES: ${ACCESS_TOKEN_EXPIRE_MINUTES}
+      SECRET_KEY: ${SECRET_KEY}
+      REFRESH_TOKEN_EXPIRE_MINUTES: ${REFRESH_TOKEN_EXPIRE_MINUTES}
+      REFRESH_TOKEN_SECRET_KEY: ${REFRESH_TOKEN_SECRET_KEY}
+
+      DEPLOYMENT_SERVICE: ${DEPLOYMENT_SERVICE}
+
+      LOG_FILE: ${LOG_FILE}
+
+    networks:
+      va_network:
+        aliases:
+          - api
+
+networks:
+  va_network:
+    name: va_network
+
+
