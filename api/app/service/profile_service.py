@@ -85,7 +85,8 @@ def get_profile_info(user: user_schema.User, accept_language: str) -> profile_sc
             )
             .where(
                 (InstitutionModel.active == True) &
-                (InstitutionModel.deleted_by.is_null(True))
+                (InstitutionModel.deleted_by.is_null(True)) &
+                (InstitutionModel.created_by == user.id)
             )
             .dicts()
             .get()
