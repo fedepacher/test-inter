@@ -206,9 +206,6 @@ docker-compose up --build
 | **DEPLOYMENT_SERVICE**           | Indicates where the app is deployed: `local` for Docker/local machine or `cloud` for production deployments (e.g., AWS, GCP).       |
 | **FORMATTER** | Defines the log output format. Can be `TXT` (plain text, colorized) or `JSON` (structured logs suitable for cloud monitoring systems). The app’s logging configuration module reads this value to set up the logging handler accordingly. |
 
-
-Absolutely ✅ — here’s your full **Testing Flow** section formatted cleanly in **Markdown**, ready to copy directly into your `README.md` file:
-
 ---
 
 ## 🧪 Testing Flow
