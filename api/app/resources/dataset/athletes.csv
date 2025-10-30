@@ -1,0 +1,21 @@
+email,name,last_name,document_number,contact_number,birthdate,gender,country,institution,active,status
+alice.smith@example.com,Alice,Smith,12345678,+4915123456789,1998-05-14,Female,Germany,GymPro,True,active
+bob.jones@example.com,Bob,Jones,98765432,+5491123456789,14/03/1995,Male,Argentina,ClubMax,True,active
+carla.mendez@example.com,Carla,Mendez,43219876,+571234567890,03-25-1992,Female,Colombia,SportZone,True,active
+daniel.lee@example.com,Daniel,Lee,56473829,+8613912345678,June 5,1990,Male,China,DragonGym,True
+elena.rodriguez@example.com,Elena,Rodriguez,92837465,+5511987654321,07.09.1999,Female,Brazil,PowerFit,True,active
+frank.williams@example.com,Frank,Williams,67891234,+61234567890,2001/12/30,Male,Australia,FitNation,True,deleted
+georgia.taylor@example.com,Georgia,Taylor,45362718,+341234567890,15-02-1997,Female,Spain,MoveUp,True,active
+henry.brown@example.com,Henry,Brown,87126354,+12025550123,1993.11.08,Male,United States,USFit,True,inactive
+isabella.lopez@example.com,Isabella,Lopez,98172645,+573212345678,08/09/1996,Female,Colombia,BodyTech,True,active
+jack.miller@example.com,Jack,Miller,74638291,+4915112345678,1997-03-22,Male,Germany,GymPro,True,deleted
+karla.santos@example.com,Karla,Santos,16549873,+5511965432109,4/7/1994,Female,Brazil,HealthZone,True,active
+lucas.garcia@example.com,Lucas,Garcia,12349876,+5491167890123,December 11 1992,Male,Argentina,ClubMax,True,inactive
+maria.wu@example.com,Maria,Wu,43218765,+8613909876543,2000-01-05,Female,China,DragonGym,True,active
+nicolas.martin@example.com,Nicolas,Martin,67890123,+341212121212,10.04.1991,Male,Spain,MoveUp,True,deleted
+olivia.silva@example.com,Olivia,Silva,98761234,+571313131313,1995/08/17,Female,Colombia,SportZone,True,active
+peter.johnson@example.com,Peter,Johnson,56473820,+12025559876,5 May 1990,Male,United States,USFit,True,inactive
+quinn.müller@example.com,Quinn,Müller,98123456,+4915771234567,09-06-1989,Female,Germany,GymPro,True,active
+ricardo.alves@example.com,Ricardo,Alves,12349876,+5511945678901,1998.03.12,Male,Brazil,HealthZone,True,deleted
+sofia.torres@example.com,Sofia,Torres,93847561,+5491176543210,06/08/1999,Female,Argentina,ClubMax,True,active
+tom.harris@example.com,Tom,Harris,84736291,+61298765432,1992-9-30,Male,Australia,FitNation,True,inactive
