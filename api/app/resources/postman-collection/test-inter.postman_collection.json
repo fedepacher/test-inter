@@ -1,0 +1,717 @@
+{
+	"info": {
+		"_postman_id": "ca9b2ede-2dda-4e15-b2e6-5638d96f43a5",
+		"name": "test-inter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37712667",
+		"_collection_link": "https://restless-spaceship-309896.postman.co/workspace/New-Team-Workspace~c5412b6b-b6fb-4dd9-a5a1-e3b96cab3a68/collection/37712667-ca9b2ede-2dda-4e15-b2e6-5638d96f43a5?action=share&source=collection_link&creator=37712667"
+	},
+	"item": [
+		{
+			"name": "athlete",
+			"item": [
+				{
+					"name": "create_athlete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "frant.toche7@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "fran7",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "torres7",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "1920-05-05",
+									"type": "text"
+								},
+								{
+									"key": "country_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "document_number",
+									"value": "1223987465",
+									"type": "text"
+								},
+								{
+									"key": "gender_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "contact_number",
+									"value": "123456789",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/athlete/?institution_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"athlete",
+								""
+							],
+							"query": [
+								{
+									"key": "institution_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update athlete",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "gender_id",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "juan@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "juan",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/athlete/1?institution_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"athlete",
+								"1"
+							],
+							"query": [
+								{
+									"key": "institution_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_athletes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/athlete/?institution_id=1&page=1&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"athlete",
+								""
+							],
+							"query": [
+								{
+									"key": "institution_id",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": "fede sanches",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_athlete_by_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/athlete/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"athlete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_athlete_by_email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/athlete/email/frant.toche7@mail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"athlete",
+								"email",
+								"frant.toche7@mail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete athlete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/athlete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"athlete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload athletes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/citric-fede/dev/test-inter/api/app/resources/dataset/athletes.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/athlete/upload_athletes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"athlete",
+								"upload_athletes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "country",
+			"item": [
+				{
+					"name": "country",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/country/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"country",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "gender",
+			"item": [
+				{
+					"name": "gender",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "es",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/gender/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"gender",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "institution",
+			"item": [
+				{
+					"name": "update institution name",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ClubMax",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/institution/?institution_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"institution",
+								""
+							],
+							"query": [
+								{
+									"key": "institution_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "professional_roles",
+			"item": [
+				{
+					"name": "get all professional roles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/professional-roles/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"professional-roles",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "profile",
+			"item": [
+				{
+					"name": "update profile",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "prueba@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "prueba",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "prueba",
+									"type": "text"
+								},
+								{
+									"key": "document_number",
+									"value": "28112356",
+									"type": "text"
+								},
+								{
+									"key": "contact_number",
+									"value": "3416125401",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "1981-01-09",
+									"type": "text"
+								},
+								{
+									"key": "gender_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "country_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "professional_role_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/profile/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile_info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8000/profile/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "create_user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "fedepacher@gmail.com",
+									"description": "The user's email address.",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "fedepacher",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "fedepacher",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "federico",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "pacher",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "2000-01-06",
+									"type": "text"
+								},
+								{
+									"key": "country_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "document_number",
+									"value": "1232456789",
+									"type": "text"
+								},
+								{
+									"key": "type_document_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "gender_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "institution",
+									"value": "Roca Futbol Club",
+									"type": "text"
+								},
+								{
+									"key": "professional_role_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "contact_number",
+									"value": "987654321",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Parse the JSON response",
+									"const response = pm.response.json();",
+									"",
+									"// Extract the access_token",
+									"const token = response.access_token;",
+									"",
+									"// Save it to the environment variable",
+									"pm.environment.set(\"access_token\", token);",
+									"console.log(\"Token saved:\", token);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "fedepacher",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "fedepacher",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "helthckeck",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "version",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/version",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"version"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{access_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
