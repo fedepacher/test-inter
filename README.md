@@ -161,3 +161,13 @@ The project is fully containerized with **Docker**.
 ```
 docker-compose up --build
 ```
+
+## 🧰 Tech Stack
+
+| Component            | Technology              |
+| -------------------- |-------------------------|
+| **Framework**        | FastAPI                 |
+| **ORM**              | Peewee                  |
+| **Database**         | MySQL                   |
+| **Containerization** | Docker & Docker Compose |
+| **Language**         | Python 3.13            |
