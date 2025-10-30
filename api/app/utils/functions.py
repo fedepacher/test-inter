@@ -127,8 +127,18 @@ def parse_date(date_str: str):
         return None
 
     date_formats = [
-        "%Y-%m-%d", "%d/%m/%Y", "%m-%d-%Y", "%B %d, %Y", "%b %d, %Y",
-        "%d-%m-%Y", "%Y/%m/%d", "%d.%m.%Y", "%Y.%m.%d", "%d %B %Y"
+        "%Y-%m-%d",     # 1992-12-11
+        "%d/%m/%Y",     # 11/12/1992
+        "%m-%d-%Y",     # 12-11-1992
+        "%B %d, %Y",    # December 11, 1992
+        "%B %d %Y",     # December 11 1992
+        "%b %d, %Y",    # Dec 11, 1992
+        "%b %d %Y",     # Dec 11 1992
+        "%d-%m-%Y",     # 11-12-1992
+        "%Y/%m/%d",     # 1992/12/11
+        "%d.%m.%Y",     # 11.12.1992
+        "%Y.%m.%d",     # 1992.12.11
+        "%d %B %Y",     # 11 December 1992
     ]
     for fmt in date_formats:
         try:

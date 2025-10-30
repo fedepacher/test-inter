@@ -2,7 +2,7 @@
 
 from typing import Annotated, Optional
 from pydantic import BaseModel, Field
-from datetime import date, datetime, timedelta
+from datetime import datetime
 
 from api.app.utils.global_def import ResultEnum
 

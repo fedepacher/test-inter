@@ -1,12 +1,10 @@
 """ Model representing institutions or organizations. """
 
 import peewee
-from datetime import datetime, timedelta
+from datetime import datetime
 
 from api.app.model.base_model import BaseModel
 from api.app.model.user_model import Users
-
-from api.app.utils.settings import Settings
 
 
 class Institutions(BaseModel):
