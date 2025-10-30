@@ -20,7 +20,7 @@ async def get_professional_role_list(request: Request) -> list:
     Get all DB professional roles.
 
     Returns:
-    - **list**: A list containing all the professional roles.
+        list: A list containing all the professional roles.
     """
     logging.info("Getting professional roles")
     accept_language = request.state.accept_language

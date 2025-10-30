@@ -20,7 +20,7 @@ async def get_gender_list(request: Request):
     Get all DB gender.
 
     Returns:
-    - **list**: A list containing all the gender.
+        list: A list containing all the gender.
     """
     logging.info("Getting gender")
     accept_language = request.state.accept_language

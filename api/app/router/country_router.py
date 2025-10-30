@@ -20,7 +20,7 @@ async def get_country_list(request: Request) -> list:
     Get all DB countries.
 
     Returns:
-    - **list**: A list containing all the countries.
+        list: A list containing all the countries.
     """
     accept_language = request.state.accept_language
     logging.info(f"get_country_list(accept_language: {accept_language}")
