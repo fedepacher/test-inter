@@ -16,14 +16,10 @@ from api.app.utils.settings import Settings
 SECRET_KEY = Settings.secret_key
 ALGORITHM = 'HS256'
 ACCESS_TOKEN_EXPIRE_MINUTES = int(Settings.token_expire)
-REFRESH_TOKEN_EXPIRE_MINUTES = int(Settings.refresh_token_expire)
-REFRESH_TOKEN_SECRET_KEY = Settings.refresh_token_secret_key
 DEFAULT_EXPIRATION_TIME = 15
 
 if SECRET_KEY is None:
     raise ValueError("SECRET_KEY env var not set")
-if REFRESH_TOKEN_SECRET_KEY is None:
-    raise ValueError("REFRESH_TOKEN_SECRET_KEY env var not set")
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")

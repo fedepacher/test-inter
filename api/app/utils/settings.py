@@ -28,8 +28,6 @@ class Settings:
     secret_key: str = os.getenv('SECRET_KEY')
     token_expire: int = os.getenv('ACCESS_TOKEN_EXPIRE_MINUTES')
     deployment_service: str = os.getenv('DEPLOYMENT_SERVICE')
-    refresh_token_secret_key: str = os.getenv('REFRESH_TOKEN_SECRET_KEY')
-    refresh_token_expire: int = os.getenv('REFRESH_TOKEN_EXPIRE_MINUTES')
 
     @classmethod
     def db_name(cls):
