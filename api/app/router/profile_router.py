@@ -45,7 +45,7 @@ def get_profile_info(request: Request, current_user: User = Depends(get_current_
     summary="Update user profile",
     description="Update the current user's profile information."
 )
-async def update_profile(
+def update_profile(
         request: Request,
         email: Optional[str] = Form(None, description="The profile's email address."),
         name: Optional[str] = Form(None, description="The profile's first name."),
@@ -94,5 +94,5 @@ async def update_profile(
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail=str(e))
     logging.info("Updating profile")
     accept_language = request.state.accept_language
-    updated_profile = await profile_service.update_profile(updated_data, current_user, accept_language)
+    updated_profile = profile_service.update_profile(updated_data, current_user, accept_language)
     return updated_profile

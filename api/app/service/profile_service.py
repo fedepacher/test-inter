@@ -165,10 +165,9 @@ def get_profile_info(user: user_schema.User, accept_language: str) -> profile_sc
         )
 
 
-async def update_profile(profile: profile_schema.ProfileIn,
-                         user: user_schema.User,
-                         accept_language: str,
-                         image: UploadFile) -> profile_schema.ProfileOut:
+def update_profile(profile: profile_schema.ProfileIn,
+                   user: user_schema.User,
+                   accept_language: str) -> profile_schema.ProfileOut:
     """Update an existing profile in the database.
 
     Args:
@@ -180,12 +179,6 @@ async def update_profile(profile: profile_schema.ProfileIn,
     Returns:
         JSONResponse: Success message with status.
     """
-    if image is not None:
-        if image.content_type not in ["image/png", "image/jpeg", "image/jpg"]:
-            raise HTTPException(status_code=400, detail="File must be a valid image format")
-    else:
-        logging.info(f"No image file provided for username {user.username}")
-
     logging.info(f"Getting current user information for user: {user.username}")
     existing_profile = get_profile_info(user, accept_language)
 
