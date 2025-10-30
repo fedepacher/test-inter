@@ -17,7 +17,7 @@ router = APIRouter(prefix="/profile")
     "/",
     tags=["profile"],
     status_code=status.HTTP_200_OK,
-    response_model=JSONResponse,
+    response_model=profile_schema.ProfileResponse,
     description="This endpoint get the user's profile."
 )
 def get_profile_info(request: Request, current_user: User = Depends(get_current_user)):
@@ -41,7 +41,9 @@ def get_profile_info(request: Request, current_user: User = Depends(get_current_
     "/",
     tags=["profile"],
     status_code=status.HTTP_200_OK,
-    response_model=JSONResponse
+    response_model=profile_schema.ProfileOut,
+    summary="Update user profile",
+    description="Update the current user's profile information."
 )
 async def update_profile(
         request: Request,

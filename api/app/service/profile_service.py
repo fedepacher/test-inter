@@ -167,7 +167,7 @@ def get_profile_info(user: user_schema.User, accept_language: str) -> profile_sc
 async def update_profile(profile: profile_schema.ProfileIn,
                          user: user_schema.User,
                          accept_language: str,
-                         image: UploadFile) -> JSONResponse:
+                         image: UploadFile) -> profile_schema.ProfileOut:
     """Update an existing profile in the database.
 
     Args:
@@ -273,7 +273,8 @@ async def update_profile(profile: profile_schema.ProfileIn,
                 detail="An unexpected error occurred while updating the user professional role."
             )
 
-    return JSONResponse(
-        content={"msg": "Profile updated successfully"},
-        status_code=status.HTTP_200_OK
+    profile_out = profile_schema.ProfileOut(
+        msg = "Profile updated successfully"
     )
+
+    return profile_out

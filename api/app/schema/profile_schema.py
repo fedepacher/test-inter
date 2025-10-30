@@ -51,3 +51,6 @@ class ProfileIn(BaseModel):
 
     class Config:
         from_attributes = True
+
+class ProfileOut(BaseModel):
+    msg: str
